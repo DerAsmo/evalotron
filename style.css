@@ -1,0 +1,75 @@
+body {
+	margin: 0;
+	padding:1rem 0;
+	background-color: grey;
+}
+
+.banner-title {
+	font-size: 5rem;
+    font-weight: bold;
+	text-align: center;
+}
+
+/* comment */
+.comment-container {
+	border: 0.1rem solid black;
+}
+
+.comment-container + .comment-container {
+	margin-top: 0.5rem;
+}
+
+.comment-info {
+	padding: 0.5rem;
+}
+
+.comment-body {
+	overflow: auto;
+	border-top: 0.01rem solid black;
+	margin: 0 0.5rem;
+	padding: 0.5rem 0;
+}
+
+.input-grp + .input-grp {
+	margin-top: 1rem;
+}
+
+.sidebar-item input {
+	width: 11.6rem;
+}
+
+.clearfix::after,
+.clearfix::after {
+  clear: both;
+}
+
+.clearfix::before,
+.clearfix::after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+#page {
+	margin: 0 auto;
+	padding: 0.5rem;
+
+	width: 65%;
+	min-width: 45rem;
+
+	background-color: white;
+}
+
+#banner {
+	padding: 2.5rem 0;
+}
+
+#content {
+	overflow: auto;
+}
+
+#sidebar {
+	float: right;
+	width: 12rem;
+    margin-left: 0.5rem;
+}
