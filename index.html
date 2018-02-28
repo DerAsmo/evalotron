@@ -12,41 +12,83 @@
 		<div id="page">
 			<div id="banner">
 				<div class="banner-title"><span>Eval-O-Tron</span></div>
+				<div class="banner-subtitle"><span>A poll evaluation tool for Steem posts created by <a href="https://steemit.com/@derasmo/">@derasmo</a>.</span></div>
+				<!--div class="banner-subtitle"><span>This page is under construction. Use <a href="http://travianinc.lima-city.de/evalotron/">this link</a> to visit the latest stable version.</span></div-->
 			</div>
 			<div id="navigation"></div>
 			<div id="container" class="clearfix">
 				<div id="sidebar">
-					<div class="sidebar-item">
-						<div class="input-grp">
-							<div class="input-label">
-								<label for="author">Author (without @)</label>
+					<div id="post_selection" class="sidebar-item">
+						<div class="sidebar-item-title">
+							<span>Post</span>
+						</div>
+						<div class="sidebar-item-content">
+							<div class="input-grp">
+								<div class="input-label">
+									<label for="search_author">Author (without @)</label>
+								</div>
+								<div class="input-field">
+									<input id="search_author" name="author" type="text" value="derasmo">
+								</div>
 							</div>
-							<div class="input-field">
-								<input id="search_author" name="author" type="text" value="derasmo">
+							<div class="input-grp">
+								<div class="input-label">
+									<label for="search_permlink">Permlink</label>
+								</div>
+								<div class="input-field">
+									<input id="search_permlink" name="permlink" type="text" value="vorstellung-von-mir-und-meiner-projektidee">
+								</div>
+							</div>
+							<div class="button">
+								<a href="#" class="button-load">Load</a>
 							</div>
 						</div>
-						<div class="input-grp">
-							<div class="input-label">
-								<label for="permlink">Permlink</label>
-							</div>
-							<div class="input-field">
-								<input id="search_permlink" name="permlink" type="text" value="vorstellung-von-mir-und-meiner-projektidee">
-							</div>
+					</div>
+					<div id="search_filter" class="sidebar-item">
+						<div class="sidebar-item-title">
+							<span>Filter</span>
 						</div>
-						<div class="input-grp">
-							<div class="input-label">
-								<label for="key">Search</label>
+						<div class="sidebar-item-content">
+							<div class="input-grp checkbox">
+								<label for="search_filter_upvoted">only upvoted</label>
+								<input id="search_filter_upvoted" name="filter_upvoted" type="checkbox">
 							</div>
-							<div class="input-field">
-								<input id="search_key" name="key" type="text">
+							<div class="input-grp checkbox">
+								<label for="search_filte_following">only following</label>
+								<input id="search_filte_following" name="filte_following" type="checkbox">
 							</div>
+							<!--
+							<div class="input-grp checkbox">
+								<label for="search_filte_resteemed">only resteemed</label>
+								<input id="search_filte_resteemed" name="search_filte_resteemed" type="checkbox">
+							</div>
+							-->
 						</div>
-						<div class="button">
-							<a href="#" class="button-search">Search</a>
+					</div>
+					<div id="search_options" class="sidebar-item">
+						<div class="sidebar-item-title">
+							<span>Options</span>
+						</div>
+						<div  class="sidebar-item-content">
+							<div class="input-grp input-options"></div>
+							<div class="clearfix">
+								<div class="button pull-right">
+									<a href="#" class="button-option-add">add</a>
+								</div>
+							</div>
+							<div class="clearfix">
+								<div class="button">
+									<a href="#" class="button-search">Search</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div id="content"></div>
+				<div id="content">
+					<div id="content_summary"></div>
+					<ul id="content_options" class="nav nav-tabs"></ul>
+					<div id="content_comments" class="tab-content"></div>
+				</div>
 			</div>
 		</div>
 	</body>
